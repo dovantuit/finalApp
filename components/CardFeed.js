@@ -3,6 +3,9 @@ import { Image, StyleSheet } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 export default class CardFeed extends Component {
   render() {
+    function handleClick() {
+      alert('liked');
+    }
     return (
       <Container style={styles.container}>
         <Header />
@@ -10,15 +13,44 @@ export default class CardFeed extends Component {
           <Card>
             <CardItem>
               <Left>
-                <Thumbnail source={{uri: 'http://i.dailymail.co.uk/i/pix/2015/09/01/18/2BE1E88B00000578-3218613-image-m-5_1441127035222.jpg'}} />
+                <Thumbnail source={{uri: '/Users/tudo/code/finalApp/assets/download (1).jpeg'}} />
                 <Body>
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
+                  <Text>Hana</Text>
+                  <Text note>5 years old</Text>
                 </Body>
               </Left>
             </CardItem>
             <CardItem cardBody>
-              <Image source={{uri: 'http://i.dailymail.co.uk/i/pix/2015/09/01/18/2BE1E88B00000578-3218613-image-m-5_1441127035222.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+              <Image source={{uri: '/Users/tudo/code/finalApp/assets/download.jpeg'}} style={{height: 200, width: null, flex: 1}}/>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>15 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>5h ago</Text>
+              </Right>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Thumbnail source={{uri: '/Users/tudo/code/finalApp/assets/download (2).jpeg'}} />
+                <Body>
+                  <Text>John</Text>
+                  <Text note>4 years old</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{uri: '/Users/tudo/code/finalApp/assets/images (1).jpeg'}} style={{height: 200, width: null, flex: 1}}/>
             </CardItem>
             <CardItem>
               <Left>
@@ -30,7 +62,7 @@ export default class CardFeed extends Component {
               <Body>
                 <Button transparent>
                   <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
+                  <Text>15 Comments</Text>
                 </Button>
               </Body>
               <Right>
@@ -39,15 +71,46 @@ export default class CardFeed extends Component {
             </CardItem>
             <CardItem>
               <Left>
-                <Thumbnail source={{uri: 'http://i.dailymail.co.uk/i/pix/2015/09/01/18/2BE1E88B00000578-3218613-image-m-5_1441127035222.jpg'}} />
+                <Thumbnail source={{uri: '/Users/tudo/code/finalApp/assets/images.jpeg'}} />
                 <Body>
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
+                  <Text>Jack</Text>
+                  <Text note>6 years old</Text>
                 </Body>
               </Left>
             </CardItem>
             <CardItem cardBody>
-              <Image source={{uri: 'http://i.dailymail.co.uk/i/pix/2015/09/01/18/2BE1E88B00000578-3218613-image-m-5_1441127035222.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+            
+              <Image source={{uri: '/Users/tudo/code/finalApp/assets/images (2).jpeg'}} style={{height: 200, width: null, flex: 1}}/>
+              
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text onClick={handleClick}>11 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>11 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>1h ago</Text>
+              </Right>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Thumbnail source={{uri: '/Users/tudo/code/finalApp/assets/images (3).jpeg'}} />
+                <Body>
+                  <Text>Tina</Text>
+                  <Text note>3 years old</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{uri: '/Users/tudo/code/finalApp/assets/images (3).jpeg'}} style={{height: 200, width: null, flex: 1}}/>
             </CardItem>
             <CardItem>
               <Left>
@@ -59,13 +122,71 @@ export default class CardFeed extends Component {
               <Body>
                 <Button transparent>
                   <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
+                  <Text>15 Comments</Text>
                 </Button>
               </Body>
               <Right>
                 <Text>11h ago</Text>
               </Right>
             </CardItem>
+            {/* <CardItem>
+              <Left>
+                <Thumbnail source={{uri: '/Users/tudo/code/finalApp/assets/download (2).jpeg'}} />
+                <Body>
+                  <Text>John</Text>
+                  <Text note>4 years old</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{uri: '/Users/tudo/code/finalApp/assets/images (1).jpeg'}} style={{height: 200, width: null, flex: 1}}/>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>15 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Thumbnail source={{uri: '/Users/tudo/code/finalApp/assets/download (2).jpeg'}} />
+                <Body>
+                  <Text>John</Text>
+                  <Text note>4 years old</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{uri: '/Users/tudo/code/finalApp/assets/images (1).jpeg'}} style={{height: 200, width: null, flex: 1}}/>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>15 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
+            </CardItem> */}
             
           </Card>
         </Content>

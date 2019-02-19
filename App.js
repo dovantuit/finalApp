@@ -10,7 +10,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>####### Trinh nha thuong ########</Text>
+        <Text>welcome to my app</Text>
         
         <CardFeed></CardFeed>
 
